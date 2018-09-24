@@ -1,3 +1,4 @@
+import React from 'react';
 
 var Contact = React.createClass ({
     propTypes: {
@@ -22,3 +23,5 @@ var Contact = React.createClass ({
        ) 
     }
 });
+
+export default Contact;

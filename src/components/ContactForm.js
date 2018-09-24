@@ -1,3 +1,4 @@
+import React from 'react';
 
 var ContactForm = React.createClass({
     propTypes: {
@@ -28,3 +29,5 @@ var ContactForm = React.createClass({
         )
     }
 });
+
+export default ContactForm;
