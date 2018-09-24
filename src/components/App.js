@@ -3,22 +3,22 @@ import contactsArr from '../data/contactsArr.json';
 import Contacts from './Contacts';
 import ContactForm from './ContactForm';
   
-  const contactForm = {
+  const contactFormObj = {
     firstName: '',
     lastName: '',
     email: '',
     image: ''
   };
 
-var App = React.createClass({
-    render: function() {
+  class App extends React.Component {
+    render() {
         return (
-            React.createElement('div', {className: 't-header__app--react'},
-                React.createElement(ContactForm, {contact: contactForm}),
-                React.createElement(Contacts, {items: contactsArr}, {})
-            )
+            <div className={'t-header__app--react'}> 
+                <ContactForm contact={contactFormObj} > </ContactForm>
+                <Contacts items={contactsArr} > </Contacts>                
+            </div>
         );
     }
-});
+  };
 
 export default App;

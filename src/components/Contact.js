@@ -1,27 +1,29 @@
 import React from 'react';
 
-var Contact = React.createClass ({
-    propTypes: {
+class Contact extends React.Component {    
+    propTypes = {
         item: React.PropTypes.object.isRequired,
-    },
-
-    render: function() {
-       return (
-           React.createElement('div', {className: 't-header__contactItem'},
-                React.createElement('div', {className: 't-header__contactImageContainer'},
-                    React.createElement('img', {
-                        className: 't-header__contactImage',
-                        src: this.props.item.image
-                    }),
-                ),
-                React.createElement('div', {className: 't-header__contactInfoContainer'},
-                    React.createElement('p', {className: 'contactlabel'}, 'Imię: ' + this.props.item.firstName ),
-                    React.createElement('p', {className: 'contactLabel'}, 'Nazwisko: ' + this.props.item.lastName),
-                    React.createElement('a', {className: 'contactEmail', href: 'mailto:' + this.props.item.email}, this.props.item.email)
-                )
-           )
-       ) 
     }
-});
+
+    render() {
+        return (
+            <div className={"t-header__contactItem"}>           
+                <div className={'t-header__contactImageContainer'}>
+                    <img className={'t-header__contactImage'} src={this.props.item.image}/>                    
+                </div>
+                <div className={'t-header__contactInfoContainer'}>
+                    <p className={'contactlabel'}>
+                        Imię: {this.props.item.firstName} 
+                    </p>
+                    <p className={'contactLabel'}>
+                        Nazwisko: {this.props.item.lastName}</p>
+                    <a className={'contactEmail'} href={'mailto:' + this.props.item.email}>
+                        {this.props.item.email}
+                    </a>
+                </div>
+            </div>
+        ) 
+    }
+};
 
 export default Contact;

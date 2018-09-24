@@ -1,20 +1,18 @@
 import React from 'react';
 import Contact from './Contact';
 
-var Contacts = React.createClass({
-    propTypes: {
+class Contacts extends React.Component {
+    propTypes = {
         items: React.PropTypes.array.isRequired,
-    },
+    }
 
-    render: function() {
-        var contactsVar = this.props.items.map(function(contactElement) {
-            return React.createElement(Contact, {item: contactElement, key: contactElement.id})
+    render() {
+        const contactsVar = this.props.items.map(contactElement => {
+            return <Contact item={contactElement} key={contactElement.id}></Contact>            
         });
 
-        return (
-            React.createElement('ul', {className: 'contactsList'}, contactsVar)
-        );
+        return <ul className={'contactsList'}>{contactsVar}</ul>        
     }
-});
+};
 
 export default Contacts;
