@@ -1,9 +1,9 @@
 import React from 'react';
 
 class ContactForm extends React.Component {
-    propTypes = {
+    static propTypes = {
         contact: React.PropTypes.object.isRequired
-    }
+    };
 
     render() {
         return (

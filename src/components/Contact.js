@@ -1,9 +1,9 @@
 import React from 'react';
 
 class Contact extends React.Component {    
-    propTypes = {
+    static propTypes = {
         item: React.PropTypes.object.isRequired,
-    }
+    };
 
     render() {
         return (

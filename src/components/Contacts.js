@@ -2,7 +2,7 @@ import React from 'react';
 import Contact from './Contact';
 
 class Contacts extends React.Component {
-    propTypes = {
+    static propTypes = {
         items: React.PropTypes.array.isRequired,
     }
 
