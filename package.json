@@ -1,8 +1,8 @@
 {
-  "name": "15-7-JSX-components2",  
+  "name": "15-7-JSX-components2",
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
-    "prop-types": "^15.5.10",
+    "prop-types": "^15.6.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   },
